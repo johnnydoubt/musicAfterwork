@@ -2,7 +2,7 @@ var keyboard2 = new QwertyHancock({
      id: 'keyboard2',
      width: 1080,
      height: 150,
-     octaves: 2
+     octaves: 3
 });
 
 var context = new AudioContext(),
@@ -34,6 +34,9 @@ keyboard2.keyDown = function (note, frequency) {
 
     osc.start(context.currentTime);
     osc2.start(context.currentTime);
+
+    console.log('BASS Note', note, 'has been pressed');
+    console.log('Its frequency is', frequency);
 };
 
 keyboard2.keyUp = function (note, frequency) {

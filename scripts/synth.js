@@ -1,7 +1,3 @@
-      // FIRST KEYBOARD (LEAD)
-
-// Instanciate keyboard
-
 var keyboard = new QwertyHancock({
      id: 'keyboard',
      width: 1080,
@@ -9,72 +5,15 @@ var keyboard = new QwertyHancock({
      octaves: 3
 });
 
-// Comment when "KeyDown" & "keyUp"
-
-keyboard.keyDown = function (note, frequency) {
-    console.log('LEAD Note', note, 'has been pressed');
-    console.log('Its frequency is', frequency);
-};
-
-keyboard.keyUp = function (note, frequency) {
-    console.log('LEAD Note', note, 'has been released');
-    console.log('Its frequency was', frequency);
-};
-
-// Instanciate sounds
-
-var context = new AudioContext();
-
-keyboard.keyDown = function (note, frequency) {
-    var osc = context.createOscillator();
-
-    osc.connect(context.destination);
-
-    osc.start(context.currentTime);
-    osc.stop(context.currentTime + 1);
-};
-
-// Control "gain"
-
 var context = new AudioContext(),
-    masterVolume = context.createGain();
+    masterVolume = context.createGain(),
+    oscillators = {};
 
-masterVolume.gain.value = 0.3;
+
+
+masterVolume.gain.value = 0.2;
+
 masterVolume.connect(context.destination);
-
-keyboard.keyDown = function (note, frequency) {
-    var osc = context.createOscillator();
-
-    osc.connect(masterVolume);
-    masterVolume.connect(context.destination);
-
-    osc.start(context.currentTime);
-    osc.stop(context.currentTime + 1);
-};
-
-// Differents frequencies taken into account
-
-osc.frequency.value = frequency;
-
-// Empty object takes oscillator value
-
-var oscillators = {};
-
-keyboard.keyDown = function (note, frequency) {
-    // Previous code here
-
-    oscillators[frequency] = osc;
-
-    osc.start(context.currentTime);
-};
-
-// on "noteUp", stop the noteUp
-
-keyboard.keyUp = function (note, frequency) {
-    oscillators[frequency].stop(context.currentTime);
-};
-
-// Define oscillator typeof
 
 keyboard.keyDown = function (note, frequency) {
     var osc = context.createOscillator(),
@@ -82,9 +21,11 @@ keyboard.keyDown = function (note, frequency) {
 
     osc.frequency.value = frequency;
     osc.type = 'sawtooth';
+    osc.detune.value = -10;
 
     osc2.frequency.value = frequency;
     osc2.type = 'triangle';
+    osc2.detune.value = 10;
 
     osc.connect(masterVolume);
     osc2.connect(masterVolume);
@@ -95,6 +36,9 @@ keyboard.keyDown = function (note, frequency) {
 
     osc.start(context.currentTime);
     osc2.start(context.currentTime);
+
+    console.log('LEAD Note', note, 'has been pressed');
+    console.log('Its frequency is', frequency);
 };
 
 keyboard.keyUp = function (note, frequency) {
