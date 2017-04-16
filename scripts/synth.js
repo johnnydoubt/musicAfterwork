@@ -14,17 +14,24 @@ var context = new AudioContext(),
 masterVolume.gain.value = 0.2;
 
 masterVolume.connect(context.destination);
+let leadSequence = [];
 
 keyboard.keyDown = function (note, frequency) {
     var osc = context.createOscillator(),
         osc2 = context.createOscillator();
+
+        console.log(frequency);
+        leadSequence.push(note);
+        console.log(leadSequence);
+
+            console.log(context.currentTime);
 
     osc.frequency.value = frequency;
     osc.type = 'sawtooth';
     osc.detune.value = -10;
 
     osc2.frequency.value = frequency;
-    osc2.type = 'triangle';
+    osc2.type = 'sawtooth';
     osc2.detune.value = 10;
 
     osc.connect(masterVolume);
@@ -37,8 +44,10 @@ keyboard.keyDown = function (note, frequency) {
     osc.start(context.currentTime);
     osc2.start(context.currentTime);
 
+
     console.log('LEAD Note', note, 'has been pressed');
     console.log('Its frequency is', frequency);
+
 };
 
 keyboard.keyUp = function (note, frequency) {
