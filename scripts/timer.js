@@ -25,9 +25,12 @@ var nowInMilliseconds = new Date().getTime();
         else {
             // Second click; how long as it been?
             duration = now - firstClick;
+
         console.log(duration);
             // Reset so we're waiting for the first click again
-            firstClick = undefined;
+            if (duration > 8000) {
+              firstClick = undefined;
+            }
 
 
         }
