@@ -11,9 +11,12 @@ body,html {
 }
 
 .keys {
-  display: flex;
+  display: none;
   flex: 1;
 
+}
+.display{
+  display:flex;
 }
 
 .key {
