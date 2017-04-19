@@ -11,7 +11,7 @@ body,html {
 }
 
 .keys {
-  display: none;
+  display: flex;
   flex: 1;
 
 }
