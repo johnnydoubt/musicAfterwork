@@ -2,9 +2,8 @@
 let timer = window.setTimeout(repeatNotes,8000);
 
 function repeatNotes(note, timestamp) {
-console.log('coucou');
+// console.log('coucou');
 }
-
 
 
 
