@@ -10,10 +10,6 @@ body {
   font-family: 8-bit, sans-serif;
 }
 
-/*a {
-  color: #9b158b;
-}*/
-
 .header {
   position: absolute;
   display: block;
@@ -35,7 +31,6 @@ body {
     font-size: 30px;
     right: 5px;
   }
-
   body {
     background-size:cover;
   }
