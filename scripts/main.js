@@ -1,11 +1,11 @@
 $("#keyButton").click(function(){
-  $("#keyboard").toggleClass("display");
-  $("#keyboard2").toggleClass("display");
+  $("#keyboard").addClass("display");
+  $("#keyboard2").addClass("display");
     $("#drums").removeClass("display");
 });
 
 $("#drumButton").click(function(){
-  $("#drums").toggleClass("display");
+  $("#drums").addClass("display");
   $("#keyboard").removeClass("display");
   $("#keyboard2").removeClass("display");
 });
