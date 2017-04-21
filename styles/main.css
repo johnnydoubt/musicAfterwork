@@ -13,3 +13,9 @@ h1 {
 .instrument {
   margin: 60px auto!important;
 }
+
+.screen {
+  width:980px;
+  height:700px;
+  background-color: black;
+}

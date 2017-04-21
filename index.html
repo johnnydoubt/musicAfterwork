@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Make Music by Sylvain & César</title>
+    <title>MUSICAR</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -12,14 +12,12 @@
 <body>
     <div class="container">
 
+<div class="screen">
+
+</div>
+
         <button id="button" type="button" name="button">START AND INTERVAL</button>
-        <h1>Make Music !</h1>
-        <div class="instrument display" id="keyboard"></div>
-        <div class="instrument display" id="keyboard2"></div>
-    </div>
-
-
-
+<button onclick="add_google_logo();">Add Google Logo</button>
     <div id="drums" class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -37,26 +35,6 @@
             <kbd>R</kbd>
             <span class="sound">openhat</span>
         </div>
-        <div data-key="84" class="key">
-            <kbd>T</kbd>
-            <span class="sound">boom</span>
-        </div>
-        <div data-key="89" class="key">
-            <kbd>Y</kbd>
-            <span class="sound">ride</span>
-        </div>
-        <div data-key="85" class="key">
-            <kbd>U</kbd>
-            <span class="sound">snare</span>
-        </div>
-        <div data-key="73" class="key">
-            <kbd>I</kbd>
-            <span class="sound">tom</span>
-        </div>
-        <div data-key="79" class="key">
-            <kbd>O</kbd>
-            <span class="sound">tink</span>
-        </div>
 
     </div>
 
@@ -65,63 +43,9 @@
         <audio data-key="90" src="sounds/hihat.wav"></audio>
         <audio data-key="69" src="sounds/kick.wav"></audio>
         <audio data-key="82" src="sounds/openhat.wav"></audio>
-        <audio data-key="84" src="sounds/boom.wav"></audio>
-        <audio data-key="89" src="sounds/ride.wav"></audio>
-        <audio data-key="85" src="sounds/snare.wav"></audio>
-        <audio data-key="73" src="sounds/tom.wav"></audio>
-        <audio data-key="79" src="sounds/tink.wav"></audio>
     </div>
 
-    <div id="drums" class="keys">
-        <div data-key="81" class="key">
-            <kbd>Q</kbd>
-            <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-            <kbd>S</kbd>
-            <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-            <kbd>D</kbd>
-            <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-            <kbd>F</kbd>
-            <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-            <kbd>G</kbd>
-            <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-            <kbd>H</kbd>
-            <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-            <kbd>J</kbd>
-            <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-            <kbd>K</kbd>
-            <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-            <kbd>L</kbd>
-            <span class="sound">tink</span>
-        </div>
-
     </div>
-
-    <audio data-key="81" src="sounds/clap.wav"></audio>
-    <audio data-key="83" src="sounds/hihat.wav"></audio>
-    <audio data-key="68" src="sounds/kick.wav"></audio>
-    <audio data-key="70" src="sounds/openhat.wav"></audio>
-    <audio data-key="71" src="sounds/ride.wav"></audio>
-    <audio data-key="72" src="sounds/ride.wav"></audio>
-    <audio data-key="74" src="sounds/snare.wav"></audio>
-    <audio data-key="75" src="sounds/tom.wav"></audio>
-    <audio data-key="76" src="sounds/tink.wav"></audio>
-
 
     <script>
         function removeTransition(e) {
@@ -137,8 +61,7 @@
             key.classList.add('playing');
             audio.currentTime = 0;
             audio.play();
-            F
-            OPENHAT
+
 
         }
 
@@ -150,10 +73,11 @@
 
 </body>
 <script src="scripts/jquery-3.2.1.min.js"></script>
-<script src="scripts/qwerty-hancock.min.js"></script>
+<script src="scripts/qwerty-hancock.min.js"></script>s
 <script src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></script>
 <script src="scripts/synth.js"></script>
 <script src="scripts/synth2.js"></script>
 <script src="scripts/timer.js"></script>
+<script src="tab.js"></script>
 
 </html>
