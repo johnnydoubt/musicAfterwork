@@ -1,7 +1,32 @@
+let A = [0,1,2,12,13,14,24,25,26,36,37,38,48,49,50,60,61,62,72,73,74,84,85,86,96,97,98,108,109,110120,121,122];
+
+
+let Z = [3,4,5,15,16,17,27,28,29,39,40,41,51,52,53,63,64,65,75,76,77,87,88,89,99,100,101,111,112,113,123,124,125];
+
+
+let E = [6,7,8,18,19,20,30,31,32,42,43,44,54,55,56,66,67,68,78,79,80,90,91,92,102,103,104,114,115,116,126,127];
+
+let R = [9,10,11,21,22,23,33,34,35,45,46,47,57,58,59,69,70,71,81,82,83,93,94,95,105,106,107,117,118,119];
+
+if (notes[i].midi )
+
+switch (expression) {
+  case value1:
+    myImage.className = 'Anote';
+    [break;]
+  case value2:
+    myImage.className = 'Znote';
+    [break;]
+  ...
+  case valueN:
+    myImage.className = 'Enote';
+    [break;]
+  default:
+    myImage.className = 'Rnote';
+    [break;]
+}
+
 $(document).ready(function() {
-
-
-
     for (let i = 0; i < notes.length; i++) {
         setTimeout(function() {
         if (notes[i].time !== notes[i-1].time) {
