@@ -8,6 +8,7 @@ h1 {
 .container {
     margin: auto;
     width: 1080px;
+    padding:40px;
 }
 
 .instrument {
@@ -15,17 +16,34 @@ h1 {
 }
 
 .screen {
+  position: relative;
   margin: auto;
   width:980px;
   height:700px;
   background-image: url(../images/playground_wallpaper.jpg);
   background-size: cover;
-  background-position: bottom center;
+  background-position:  center;
 }
 
 .notes {
-  position: absolute;
+  position:absolute;
     transition: all 4s;
+}
+
+.Anote {
+  left: 370px;
+}
+
+.Znote {
+left:420px;
+}
+
+.Enote {
+left:470px;
+}
+
+.Rnote {
+right:360px;
 }
 
 .kikoo {
