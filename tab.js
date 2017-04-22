@@ -1,13 +1,16 @@
 $(document).ready(function() {
 
+
+
     for (let i = 0; i < notes.length; i++) {
         setTimeout(function() {
         if (notes[i].time !== notes[i-1].time) {
           var myImage = new Image(100, 100);
+          myImage.className = 'notes';
           myImage.src = 'images/donut.png';
           console.log(myImage);
           var time = 0;
-      $('.container').prepend(myImage);
+      $('.screen').prepend(myImage);
           console.log((notes[i].time)*1000);
         }
         }, (notes[i].time)*1000);
