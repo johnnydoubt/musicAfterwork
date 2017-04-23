@@ -26,26 +26,48 @@ h1 {
 }
 
 .notes {
-  position:absolute;
-    transition: all 4s;
+  position: absolute;
+  transition : transform 5s;
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+     animation-timing-function: linear;
+   animation-duration: 4s;
 }
 
 .Anote {
-  left: 370px;
+  left:370px;
+  animation-name: Amove;
+
 }
 
 .Znote {
 left:420px;
+animation-name: Zmove;
 }
 
 .Enote {
 left:470px;
+animation-name: Emove;
 }
 
 .Rnote {
 right:360px;
+animation-name: Rmove;
 }
 
-.kikoo {
-  transform: translate(50px, 100px);
+
+@keyframes Amove {
+    0%   {top:0px;left:370px;transform:scale(1);}
+    100% {top:600px;left:90px;transform:scale(2.5);}
+}
+@keyframes Zmove {
+    0%   {top:0px;left:370px;transform:scale(1);}
+    100% {top:600px;left:90px;transform:scale(2.5);}
+}
+@keyframes Emove {
+    0%   {top:0px;left:370px;transform:scale(1);}
+    100% {top:600px;left:90px;transform:scale(2.5);}
+}
+@keyframes Rmove {
+    0%   {top:0px;left:370px;transform:scale(1);}
+    100% {top:600px;left:90px;transform:scale(2.5);}
 }

@@ -28,14 +28,16 @@ $(document).ready(function() {
               break;
           }
           myImage.src = 'images/donut.png';
-          console.log(myImage);
           var time = 0;
       $('.screen').prepend(myImage);
-          console.log((notes[i].time)*1000);
         }
+        setTimeout(function(){
+  $(myImage).remove();
+}, 4000);
         }, (notes[i].time)*1000);
     }
 });
+
 
 var notes =  [
         {
