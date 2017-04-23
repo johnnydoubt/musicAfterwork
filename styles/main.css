@@ -1,71 +1,121 @@
 body {
     font-family: sans-serif;
 }
+
 h1 {
-  text-align: center;
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px 0;
+    text-align: center;
+    color:white;
+    font-size:3rem;
+    background: rgba(255, 255, 255, 0.1);
+
 }
 
 .container {
     margin: auto;
     width: 1080px;
-    padding:40px;
+    padding: 40px;
 }
 
 .instrument {
-  margin: 60px auto!important;
+    margin: 60px auto!important;
 }
 
 .screen {
-border:3px solid white;
+    border: 3px solid white;
     border-radius: 2%;
-  position: relative;
-  margin: auto;
-  width:980px;
-  height:700px;
-  background-image: url(../images/playground_wallpaper.jpg);
-  background-size: cover;
-  background-position:  center;
+    position: relative;
+    margin: auto;
+    width: 980px;
+    height: 700px;
+    background-image: url(../images/playground_wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .notes {
-  position: absolute;
-  transition : transform 5s;
-  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
-     animation-timing-function: linear;
-   animation-duration: 4s;
+    position: absolute;
+    transition: transform 5s;
+    -webkit-animation-timing-function: linear;
+    /* Safari 4.0 - 8.0 */
+    animation-timing-function: linear;
+    animation-duration: 4s;
 }
 
 .Anote {
-  animation-name: Amove;
-
+    top: 30px;
+    left: 400px;
+    animation-name: Amove;
 }
 
 .Znote {
-animation-name: Zmove;
+    top: 30px;
+    left: 450px;
+    animation-name: Zmove;
 }
 
 .Enote {
-animation-name: Emove;
+    top: 30px;
+    left: 480px;
+    animation-name: Emove;
 }
 
 .Rnote {
-animation-name: Rmove;
+    top: 30px;
+    right: 400px;
+    animation-name: Rmove;
 }
-
 
 @keyframes Amove {
-    0%   {top:30px;left:400px;transform:scale(1);}
-    100% {top:600px;left:120px;transform:scale(2.5);}
+    0% {
+        top: 30px;
+        left: 400px;
+        transform: scale(1);
+    }
+    100% {
+        top: 600px;
+        left: 120px;
+        transform: scale(2.5);
+    }
 }
+
 @keyframes Zmove {
-    0%   {top:30px;left:450px;transform:scale(1);}
-    100% {top:600px;left:350px;transform:scale(2.5);}
+    0% {
+        top: 30px;
+        left: 450px;
+        transform: scale(1);
+    }
+    100% {
+        top: 600px;
+        left: 350px;
+        transform: scale(2.5);
+    }
 }
+
 @keyframes Emove {
-    0%   {top:30px;left:480px;transform:scale(1);}
-    100% {top:600px;left:580px;transform:scale(2.5);}
+    0% {
+        top: 30px;
+        left: 480px;
+        transform: scale(1);
+    }
+    100% {
+        top: 600px;
+        left: 580px;
+        transform: scale(2.5);
+    }
 }
+
 @keyframes Rmove {
-    0%   {top:30px;right:400px;transform:scale(1);}
-    100% {top:600px;right:110px;transform:scale(2.5);}
+    0% {
+        top: 30px;
+        right: 400px;
+        transform: scale(1);
+    }
+    100% {
+        top: 600px;
+        right: 110px;
+        transform: scale(2.5);
+    }
 }

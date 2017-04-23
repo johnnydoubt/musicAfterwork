@@ -19,39 +19,46 @@ $(document).ready(function() {
           switch (true) {
             case A.includes(notes[i].midi):
               myImage.className = 'notes Anote';
+              myImage.src = 'images/puckblue.png';
               break;
             case Z.includes(notes[i].midi):
               myImage.className = 'notes Znote';
+              myImage.src = 'images/puckgreen.png';
               break;
             case E.includes(notes[i].midi):
               myImage.className = 'notes Enote';
+              myImage.src = 'images/puckyellow.png';
               break;
             case R.includes(notes[i].midi):
               myImage.className = 'notes Rnote';
+              myImage.src = 'images/puckred.png';
               break;
           }
-          myImage.src = 'images/puck.png';
           var time = 0;
+
       $('.screen').prepend(myImage);
+      
+      setTimeout(function(){
+                if(myImage.className='notes Anote'){
+                  at=true;
+                  setTimeout(function(){at = false;},300);
+                  }
+                else if(myImage.className='notes Znote'){
+                  zt=true;
+                  setTimeout(function(){zt = false;},300);
+                  }
+                else if(myImage.className='notes Enote'){
+                  et=true;
+                  setTimeout(function(){et = false;},300);
+                  }
+                else if(myImage.className='notes Rnote'){
+                  rt=true;
+                  setTimeout(function(){rt = false;},300);
+                  }
+                },3700);
         }
-        setTimeout(function(){
-                  if(myImage.className='notes Anote'){
-                    at=true;
-                    setTimeout(function(){at = false;},300);
-                    }
-                  else if(myImage.className='notes Znote'){
-                    zt=true;
-                    setTimeout(function(){zt = false;},300);
-                    }
-                  else if(myImage.className='notes Enote'){
-                    et=true;
-                    setTimeout(function(){et = false;},300);
-                    }
-                  else if(myImage.className='notes Rnote'){
-                    rt=true;
-                    setTimeout(function(){rt = false;},300);
-                    }
-                  },3700);
+
+
         setTimeout(function(){
   $(myImage).remove();
 }, 4000);
