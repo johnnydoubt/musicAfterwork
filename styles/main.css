@@ -16,6 +16,8 @@ h1 {
 }
 
 .screen {
+border:3px solid white;
+    border-radius: 2%;
   position: relative;
   margin: auto;
   width:980px;
@@ -34,40 +36,36 @@ h1 {
 }
 
 .Anote {
-  left:370px;
   animation-name: Amove;
 
 }
 
 .Znote {
-left:420px;
 animation-name: Zmove;
 }
 
 .Enote {
-left:470px;
 animation-name: Emove;
 }
 
 .Rnote {
-right:360px;
 animation-name: Rmove;
 }
 
 
 @keyframes Amove {
-    0%   {top:0px;left:370px;transform:scale(1);}
-    100% {top:600px;left:90px;transform:scale(2.5);}
+    0%   {top:30px;left:400px;transform:scale(1);}
+    100% {top:600px;left:120px;transform:scale(2.5);}
 }
 @keyframes Zmove {
-    0%   {top:0px;left:370px;transform:scale(1);}
-    100% {top:600px;left:90px;transform:scale(2.5);}
+    0%   {top:30px;left:450px;transform:scale(1);}
+    100% {top:600px;left:350px;transform:scale(2.5);}
 }
 @keyframes Emove {
-    0%   {top:0px;left:370px;transform:scale(1);}
-    100% {top:600px;left:90px;transform:scale(2.5);}
+    0%   {top:30px;left:480px;transform:scale(1);}
+    100% {top:600px;left:580px;transform:scale(2.5);}
 }
 @keyframes Rmove {
-    0%   {top:0px;left:370px;transform:scale(1);}
-    100% {top:600px;left:90px;transform:scale(2.5);}
+    0%   {top:30px;right:400px;transform:scale(1);}
+    100% {top:600px;right:110px;transform:scale(2.5);}
 }

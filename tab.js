@@ -6,13 +6,16 @@ let E = [6,7,8,18,19,20,30,31,32,42,43,44,54,55,56,66,67,68,78,79,80,90,91,92,10
 
 let R = [9,10,11,21,22,23,33,34,35,45,46,47,57,58,59,69,70,71,81,82,83,93,94,95,105,106,107,117,118,119];
 
-
+let at = false;
+let zt = false;
+let et = false;
+let rt = false;
 
 $(document).ready(function() {
     for (let i = 0; i < notes.length; i++) {
         setTimeout(function() {
         if (notes[i].time !== notes[i-1].time) {
-          var myImage = new Image(100, 100);
+          var myImage = new Image(45, 22);
           switch (true) {
             case A.includes(notes[i].midi):
               myImage.className = 'notes Anote';
@@ -27,16 +30,36 @@ $(document).ready(function() {
               myImage.className = 'notes Rnote';
               break;
           }
-          myImage.src = 'images/donut.png';
+          myImage.src = 'images/puck.png';
           var time = 0;
       $('.screen').prepend(myImage);
         }
+        setTimeout(function(){
+                  if(myImage.className='notes Anote'){
+                    at=true;
+                    setTimeout(function(){at = false;},300);
+                    }
+                  else if(myImage.className='notes Znote'){
+                    zt=true;
+                    setTimeout(function(){zt = false;},300);
+                    }
+                  else if(myImage.className='notes Enote'){
+                    et=true;
+                    setTimeout(function(){et = false;},300);
+                    }
+                  else if(myImage.className='notes Rnote'){
+                    rt=true;
+                    setTimeout(function(){rt = false;},300);
+                    }
+                  },3700);
         setTimeout(function(){
   $(myImage).remove();
 }, 4000);
         }, (notes[i].time)*1000);
     }
 });
+
+
 
 
 var notes =  [

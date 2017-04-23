@@ -12,9 +12,11 @@
 <body>
     <div class="container">
 
-        <div class="screen">
 
-        </div>
+  <div class="screen">
+
+  </div>
+
         <div id="drums" class="keys">
             <div data-key="65" class="key">
                 <kbd>A</kbd>
@@ -62,13 +64,11 @@
             key.classList.add('playing');
             audio.currentTime = 0;
             audio.play();
-
-
         }
 
         const keys = Array.from(document.querySelectorAll('.key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        window.addEventListener('keydown' && 'click', playSound);
+        window.addEventListener('keydown', playSound);
     </script>
 
 
@@ -80,5 +80,6 @@
 <script src="scripts/synth2.js"></script>
 <script src="scripts/timer.js"></script>
 <script src="tab.js"></script>
+<script src="score.js"></script>
 
 </html>
