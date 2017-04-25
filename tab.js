@@ -37,7 +37,7 @@ $(document).ready(function() {
           var time = 0;
 
       $('.screen').prepend(myImage);
-      
+
       setTimeout(function(){
                 if(myImage.className='notes Anote'){
                   at=true;
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 
 
-var notes =  [
+var acdc =  [
         {
           "name": "E3",
           "midi": 52,
