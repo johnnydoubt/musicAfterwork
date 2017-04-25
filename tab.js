@@ -37,22 +37,27 @@ $(document).ready(function() {
           var time = 0;
 
       $('.screen').prepend(myImage);
-      
+
       setTimeout(function(){
-                if(myImage.className='notes Anote'){
+                if(myImage.className == 'notes Anote'){
                   at=true;
+                  console.log('note A');
                   setTimeout(function(){at = false;},300);
+
                   }
-                else if(myImage.className='notes Znote'){
+                else if(myImage.className == 'notes Znote'){
                   zt=true;
+                  console.log('note Z');
                   setTimeout(function(){zt = false;},300);
                   }
-                else if(myImage.className='notes Enote'){
+                else if(myImage.className == 'notes Enote'){
                   et=true;
+                  console.log('note E');
                   setTimeout(function(){et = false;},300);
                   }
-                else if(myImage.className='notes Rnote'){
+                else if(myImage.className == 'notes Rnote'){
                   rt=true;
+                  console.log('note R');
                   setTimeout(function(){rt = false;},300);
                   }
                 },3700);
