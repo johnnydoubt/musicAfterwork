@@ -20,7 +20,9 @@
 <a href="about.html"><h2 class="about-h2">ABOUT</h2></a>
 
   <div class="screen">
+<div class="score-line">
 
+</div>
   </div>
 
         <div id="drums" class="keys">
@@ -56,8 +58,6 @@
             const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 
             key.classList.add('playing');
-            audio.currentTime = 0;
-            audio.play();
         }
 
         const keys = Array.from(document.querySelectorAll('.key'));
