@@ -1,0 +1,53 @@
+h1 {
+  margin: 20px auto;
+}
+h2 {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 0;
+}
+.cards {
+  flex:0 0 30%;
+  text-align: center;
+  background-color: rgba(55, 40, 40, 0.6);
+  border: 3px solid white;
+  border-radius: 2%;
+  width: 30%;
+  height: 770px;
+}
+.cards:hover {
+  transform: scale(1.02);
+  border: 3px solid burlywood;
+  color:burlywood;
+}
+
+.cards:hover div {
+  color:burlywood;
+}
+
+.cards:hover div img {
+  border-color:burlywood;
+}
+.container {
+  display: flex;
+  margin: auto;
+  width: 1280px;
+  padding: 40px;
+  justify-content: space-between;
+}
+.about-title, .about-text {
+  text-align: center;
+  color:white;
+  padding: 12px;
+}
+.about-img  {
+    height:510px;
+  margin: auto;
+    margin-top: 20px;
+  width: 80%;
+}
+.about-img:hover {
+transform: scale(1.02);
+}
+.about-img  img {
+  border: 2px solid white;
+}

@@ -35,6 +35,7 @@ h1 {
     background-position: center;
 }
 
+
 .notes {
     position: absolute;
     transition: transform 5s;
