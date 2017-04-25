@@ -1,90 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>MUSICAR</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/font-awesome-4.7.0/css/font-awesome.min.css">
-
-
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="home.css" media="screen" title="no title">
+  <link rel="shortcut icon" href="/images/devil.png">
+  <title>Musicar</title>
 </head>
 
 <body>
-    <div class="container">
-<h1>MUSICAR</h1>
-<div class="scoretab">score:<span id="score">0</span></div>
-<div class="scoretab">combo x <span id="combo">1</span></div>
-  <div class="screen">
+  <div class="container">
+    <div>
+      <h1 class="title">Musicar</h1>
+      <p class="accroche">Ready ? Let's Rock !</p>
+      <p id="rules"><span>INSTRUCTIONS</span></p>
+    </div>
+    <div id="rules_p">
+      <p>Ce jeu se joue avec le clavier, AZER sont les touches à présser. Essayez de gagner le maximum de point en suivant les notes à l'écran. Mais attention, le timing doit être parfait ! Le jeu se terminera à la fin de chanson. Gambare !</p>
+    </div>
 
-  </div>
+    <div class="inside_container">
 
-        <div id="drums" class="keys">
-            <div data-key="65" class="key">
-                <kbd>A</kbd>
-                <span class="sound">clap</span>
-            </div>
-            <div data-key="90" class="key">
-                <kbd>Z</kbd>
-                <span class="sound">hihat</span>
-            </div>
-            <div data-key="69" class="key">
-                <kbd>E</kbd>
-                <span class="sound">kick</span>
-            </div>
-            <div data-key="82" class="key">
-                <kbd>R</kbd>
-                <span class="sound">openhat</span>
-            </div>
-
-        </div>
-
-        <div>
-            <audio data-key="65" src="sounds/clap.wav"></audio>
-            <audio data-key="90" src="sounds/hihat.wav"></audio>
-            <audio data-key="69" src="sounds/kick.wav"></audio>
-            <audio data-key="82" src="sounds/openhat.wav"></audio>
-        </div>
-
-        <button id="button" type="button" name="button">START AND INTERVAL</button>
-        <button onclick="add_google_logo();">Add Google Logo</button>
+  <div class="border pix p2">
+        <a href="RedHotChiliPeppers-Californication.html"><div class="bomb">Red Hot Chili Peppers</div></a>
+      </div>
 
     </div>
 
-    <script>
-        function removeTransition(e) {
-            if (e.propertyName !== 'transform') return;
-            e.target.classList.remove('playing');
-        }
+  </div>
+  </div>
 
-        function playSound(e) {
-          console.log('kikoo');
-            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-            const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-            if (!audio) return;
+  <footer class="footlose">
+    <p>© Copyright SimplonMars 2017 - All rights reserved -<br> Sylvain Chikitos / César Mahamaya / Fodil Kintaro</p>
+  </footer>
 
-            key.classList.add('playing');
-            audio.currentTime = 0;
-            audio.play();
-        }
-
-        const keys = Array.from(document.querySelectorAll('.key'));
-        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-        window.addEventListener('keydown', playSound);
-    </script>
-
-
+  <script src="app_home.js"></script>
 </body>
-<script src="scripts/jquery-3.2.1.min.js"></script>
-<script src="scripts/qwerty-hancock.min.js"></script>
-<script src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></script>
-<script src="scripts/synth.js"></script>
-<script src="scripts/synth2.js"></script>
-<script src="scripts/timer.js"></script>
-<script src="RHCP.js"></script>
-<script src="tab.js"></script>
-<script src="score.js"></script>
 
 </html>
