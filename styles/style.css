@@ -34,18 +34,26 @@ margin: 0 40px;
 
 .playing {
   transform: scale(1.1);
+}
+
+.playing:first-child {
+  border-color: blue;
+  box-shadow: 0 0 1rem blue;
+}
+.playing:nth-child(2) {
+  border-color: forestgreen;
+  box-shadow: 0 0 1rem forestgreen;
+}
+.playing:nth-child(3) {
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
+}
+.playing:last-child {
+  border-color: red;
+  box-shadow: 0 0 1rem red;
 }
 
 kbd {
   display: block;
   font-size: 4rem;
-}
-
-.sound {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  color: #ffc600;
 }

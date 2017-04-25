@@ -42,12 +42,6 @@
 
         </div>
 
-        <div>
-            <audio data-key="65" src="sounds/clap.wav"></audio>
-            <audio data-key="90" src="sounds/hihat.wav"></audio>
-            <audio data-key="69" src="sounds/kick.wav"></audio>
-            <audio data-key="82" src="sounds/openhat.wav"></audio>
-        </div>
 
 
     </div>
@@ -62,7 +56,6 @@
           console.log('kikoo');
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
             const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
-            if (!audio) return;
 
             key.classList.add('playing');
             audio.currentTime = 0;
