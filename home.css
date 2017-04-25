@@ -1,0 +1,194 @@
+  @font-face {
+    font-family: b8;
+    src: url("src/8_bit.TTF");
+  }
+
+  body {
+    margin: 0;
+    background-image: url("images/couv.jpg");
+    background-size: cover;
+  }
+
+  .container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+  }
+
+
+  h1 {
+    font-family: b8, sans-serif;
+    margin-top: inherit;
+    flex-direction: column-reverse;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 90px;
+  }
+
+  .accroche {
+    margin-top: inherit;
+    flex-direction: column-reverse;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .inside_container {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  #rules {
+    color: #9b158b;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 0;
+    width: 100%;
+    text-decoration: underline;
+    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #rules span:hover {
+    transform: scale(1.2);
+  }
+
+  #rules_p {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 75%;
+    border-radius: 10%;
+    display: none;
+    background-color: rgba(84, 79, 79, 0.7);
+    text-align: center;
+  }
+
+  #rules_p.visible {
+    display: block;
+  }
+
+  #rules_p p {
+    height: 70px;
+    color: white;
+    font-size: 20px;
+
+  }
+
+  /*Carte déco footer*/
+  .footlose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  /*.p1 {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-image: url("images/ACDC.jpg");
+    position: relative;
+    background-size: contain;
+    background-size: 100%;
+    width: auto;
+  }*/
+
+  .p2 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-image: url("images/redhot.jpg");
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: contain;
+    background-size: 100%;
+    width: auto;
+  }
+/*
+  .p3 {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-image: url("images/jb.jpg");
+    position: relative;
+    background-size: contain;
+    background-size: 100%;
+    width: auto;
+  }*/
+
+  .pix {
+    box-shadow: -3px 6px 10px 1px #2c3e50;
+    border: 3px solid #2c3e50;
+    margin: 5px;
+    height: 276px;
+    width: 20%;
+  }
+
+  .bomb {
+    background-color: #6e1470;
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 30px;
+    padding: 10px;
+    transform: scale(0);
+    transition: transform 1.3s;
+  }
+
+  .pix:hover .bomb {
+    transform: scale(1);
+    display: block;
+  }
+
+  .pix:hover {
+    border: 5px solid #6e1470;
+  }
+
+  footer {
+    font-family: b8, sans-serif;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-family: fantasy;
+  }
+
+  @media screen and (max-width: 600px) {
+    .container {
+      width: auto;
+    }
+    h1 {
+      font-size: 50px;
+    }
+    .accroche {
+      font-size: 30px;
+    }
+    .inside_container {
+      width: auto;
+    }
+    #play, #rules {
+      font-size: 18px;
+    }
+    #play:hover, #rules:hover {
+      transform: scale(1.1);
+    }
+    #rules_p p {
+      font-size: 18px;
+    }
+  }
